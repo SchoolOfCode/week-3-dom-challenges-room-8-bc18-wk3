@@ -13,3 +13,18 @@ Expected Outcomes:
 */
 
 // Place your plan and solution below!
+
+
+// grab the canvas
+// grab the input
+// write a function that gets the rgb value from the color picker and sets the background color of the canvas to that color.
+
+const canvasDiv = document.getElementById("canvas");
+
+const colorChoice = document.getElementById("colorPicker");
+
+function changeColor() {
+  canvasDiv.style.backgroundColor = colorChoice.value
+}
+
+colorChoice.addEventListener("input", changeColor)
