@@ -13,3 +13,21 @@ Expected Outcomes:
 */
 
 // Place your plan and solution below!
+
+// grab the div id for the star element
+const starDiv = document.getElementById("stars");
+
+// Find the appropriate event listener for the slider
+const starSlider = document.getElementById("starSlider");
+starSlider.addEventListener("input", starMaker);
+console.log(starSlider.value)
+
+function starMaker() {
+
+}
+//create variable to log the slider value (?)
+
+
+// create spans for the star icons equal to the changing value from the slider
+
+
