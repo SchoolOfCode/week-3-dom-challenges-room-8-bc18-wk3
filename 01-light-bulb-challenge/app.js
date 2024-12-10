@@ -14,3 +14,42 @@ Expected Outcomes:
 */
 
 // Place your plan and solution below!
+let bulbState = "";
+let bulbImg = "";
+let bulbPNG = document.getElementById("lightbulb");
+
+const onButton = document.getElementById("turnBulbOn");
+const offButton = document.getElementById("turnBulbOff");
+
+function lightSwitch(button) {
+  if (button === "on") {
+    bulbState = "on";
+    console.log(bulbState);
+  } else if (button === "off") {
+    bulbState = "off";
+    console.log(bulbState);
+  }
+
+  // Update the bulb image path
+  bulbImg = `light-bulb-${bulbState}.png`;
+  console.log(bulbState);
+
+  // Update the image source dynamically
+  if (bulbPNG) {
+    bulbPNG.src = bulbImg;
+    console.log(bulbImg);
+  }
+}
+
+const turnOnHandler = onButton.addEventListener("click", () =>
+  lightSwitch("on")
+);
+
+const turnOffHandler = offButton.addEventListener("click", () =>
+  lightSwitch("off")
+);
+
+//when on button is clicked, bulbState is set to on
+// grab on button
+// create handler that takes in
+//when off button is clicked, bulbState is set to off
