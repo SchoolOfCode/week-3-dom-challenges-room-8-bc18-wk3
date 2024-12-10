@@ -16,14 +16,23 @@ Expected Outcomes:
 
 // grab the div id for the star element
 const starDiv = document.getElementById("stars");
+const starIcon = document.getElementsByClassName("star-icon");
 
 // Find the appropriate event listener for the slider
 const starSlider = document.getElementById("starSlider");
 starSlider.addEventListener("input", starMaker);
 console.log(starSlider.value)
 
-function starMaker() {
 
+function starMaker() {
+  starDiv.innerHTML = "";
+  const starCount = Number(starSlider.value);
+  for (let i = 0; i < starCount; i++) {
+  const newSpan = document.createElement("span");
+  newSpan.classList.add("star-icon")
+  newSpan.textContent ="★"
+  starDiv.append(newSpan)
+  } 
 }
 //create variable to log the slider value (?)
 
